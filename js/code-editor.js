@@ -24,15 +24,9 @@ btn.addEventListener('click', changeColors);
 function changeColors() {
   h1.style.color = "gold";
   h1.style.backgroundColor = "purple";
-  h2.style.color = "forestgreen";
+  h2.style.color = "blue";
   h2.style.textTransform = "uppercase";
 }
-
-<h1>Hello World</h1>
-<h2>HTML-CSS-JS Code Editor</h2>
-<p>How do you like this HTML-CSS-JS Code Editor, coded entirely in HTML, CSS and Vanilla JS with no libraries.
-</p>
-<button>Click Me</button>
 
 body {
   background-color: tan;
@@ -46,7 +40,7 @@ h1 {
     background-color: orange;
     color: #fff;
     margin: 0;
-    padding: 5px 10px;
+    padding: 15px;
 }
 p {
   line-height: 1.4rem;
@@ -58,6 +52,16 @@ button {
   font-weight: bold;
   margin: 0 auto;
   text-transform: uppercase;
+  cursor: pointer;
 }
+button:hover {
+ backgroundColor: "green";
+}
+
+<h1>Hello World</h1>
+<h2>HTML-CSS-JS Code Editor</h2>
+<p>How do you like this HTML-CSS-JS Code Editor, coded entirely in HTML, CSS and Vanilla JS with no libraries.
+</p>
+<button>Click Me</button>
 
 */
