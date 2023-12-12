@@ -15,17 +15,27 @@ function runCode() {
 }
 
 /*
+
 h1 = document.querySelector('h1');
 h2 = document.querySelector('h2');
+p = document.querySelector('p');
+body = document.querySelector('body');
 
 const btn = document.querySelector('button');
 btn.addEventListener('click', changeColors);
 
 function changeColors() {
+  body.style.padding = "20px 50px";
+  body.style.backgroundColor = "#ccc";
   h1.style.color = "gold";
   h1.style.backgroundColor = "purple";
   h2.style.color = "blue";
+  h2.style.fontStyle = "italic";
   h2.style.textTransform = "uppercase";
+  p.style.fontFamily = 'monospace';
+  p.style.fontSize = "21px";
+  p.style.lineHeight = "2rem";
+  p.style.fontWeight = "bold";
 }
 
 body {
@@ -53,6 +63,7 @@ button {
   margin: 0 auto;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 15px;
 }
 button:hover {
  backgroundColor: "green";
