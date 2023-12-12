@@ -15,18 +15,20 @@ function runCode() {
 }
 
 /*
+Code for pasting into Code Editor:
 
-h1 = document.querySelector('h1');
-h2 = document.querySelector('h2');
-p = document.querySelector('p');
-body = document.querySelector('body');
+// JS
+const h1 = document.querySelector('h1');
+const h2 = document.querySelector('h2');
+const p = document.querySelector('p');
+const bod = document.querySelector('body');
 
 const btn = document.querySelector('button');
 btn.addEventListener('click', changeColors);
 
 function changeColors() {
-  body.style.padding = "20px 50px";
-  body.style.backgroundColor = "#ccc";
+  bod.style.padding = "20px 50px";
+  bod.style.backgroundColor = "#ccc";
   h1.style.color = "gold";
   h1.style.backgroundColor = "purple";
   h2.style.color = "blue";
@@ -36,8 +38,10 @@ function changeColors() {
   p.style.fontSize = "21px";
   p.style.lineHeight = "2rem";
   p.style.fontWeight = "bold";
+  btn.style.letterSpacing = "15px";
 }
 
+// CSS
 body {
   background-color: tan;
   margin: 0;
@@ -65,10 +69,8 @@ button {
   cursor: pointer;
   border-radius: 15px;
 }
-button:hover {
- backgroundColor: "green";
-}
 
+// HTML
 <h1>Hello World</h1>
 <h2>HTML-CSS-JS Code Editor</h2>
 <p>How do you like this HTML-CSS-JS Code Editor, coded entirely in HTML, CSS and Vanilla JS with no libraries.
