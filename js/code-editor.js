@@ -1,18 +1,20 @@
-const htmlTA = document.getElementById('html-code');
-const cssTA = document.getElementById('css-code');
-const jsTA = document.getElementById('js-code');
+const htmlBox = document.getElementById('html-code');
+const cssBox = document.getElementById('css-code');
+const jsBox = document.getElementById('js-code');
 
 const runBtn = document.getElementById('run');
 runBtn.addEventListener('click', runCode);
 
-const output = document.getElementById('output');
+const iframe = document.querySelector('iframe');
 
 function runCode() {
-    const render = output.contentDocument.body;
-    render.innerHTML = htmlTA.value;
-    render.innerHTML += `<style>${cssTA.value}</script>`;
-    output.contentWindow.eval(jsTA.value);
+    const output = iframe.contentDocument.body;
+    output.innerHTML = `${htmlBox.value}<style>${cssBox.value}</script>`;
+    iframe.contentWindow.eval(jsBox.value);
 }
+
+const idoc = document.getElementsByTagName("iframe")[0].contentWindow.document;
+window.open(idoc.getElementById("idOfImageInTheIframe").src, "download_win");
 
 /*
 Code for pasting into Code Editor:
@@ -40,6 +42,9 @@ function changeColors() {
   p.style.fontWeight = "bold";
   btn.style.letterSpacing = "15px";
 }
+
+// random h1 color on any key press
+document.addEventListener('keydown', () => document.querySelector('h1').style.color = "#" + Math.floor(Math.random()*16777216).toString(16));
 
 // CSS
 body {
